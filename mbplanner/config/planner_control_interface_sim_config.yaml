@@ -4,7 +4,7 @@ init_motion_enable: true
 planner_trigger_lead_time: 0.8
 smooth_heading_enable: true
 init_motion:
-  z_takeoff: 2.5
+  z_takeoff: 2.0
   z_drop: 1.0
   x_forward: 2.0
 

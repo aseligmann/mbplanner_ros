@@ -85,17 +85,28 @@ SensorParams:
 #   Global: Strictly defined bounds for the whole environment.
 #   Local: Define a local space wrt current robot state for planning.
 #-------------------------------------------------------------------------------
+# BoundedSpaceParams:
+#   Global:
+#     type:           kCuboid
+#     min_val:        [0.0, -300.0, -0.5]
+#     max_val:        [550, 300.0, 3.0]
+#   Local:
+#     type:           kCuboid
+#     min_val:        [-20.0, -20.0, -3.0]
+#     max_val:        [20.0, 20.0, 3.0]
+#     min_extension:  [-20.0, -20.0, -3.0]
+#     max_extension:  [20.0, 20.0, 3.0]
 BoundedSpaceParams:
   Global:
     type:           kCuboid
     min_val:        [0.0, -300.0, -0.5]
-    max_val:        [550, 300.0, 3.0]
+    max_val:        [550, 300.0, 30.0]
   Local:
     type:           kCuboid
-    min_val:        [-20.0, -20.0, -3.0]
-    max_val:        [20.0, 20.0, 3.0]
-    min_extension:  [-20.0, -20.0, -3.0]
-    max_extension:  [20.0, 20.0, 3.0]
+    min_val:        [-10.0, -10.0, -10.0]
+    max_val:        [10.0, 10.0, 10.0]
+    min_extension:  [-10.0, -10.0, -10.0]
+    max_extension:  [10.0, 10.0, 10.0]
 #-------------------------------------------------------------------------------
 # SAMPLING POLICY CONFIGURATION
 #   Sample space limited to 4 states: X, Y, Z, and Heading
